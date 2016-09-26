@@ -443,6 +443,9 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+.contact-me {
+  text-align: center;
+}
 article .container .row img {
   max-width: 100% !important;
   height: auto;

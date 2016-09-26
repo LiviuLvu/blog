@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Liviu&#39;s Blog"/>
+        <meta property="og:title" content="Sorting App for Classical Composers"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Liviu&#39;s Blog</title>
+    <title>Sorting App for Classical Composers - Liviu&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -120,65 +120,85 @@
 
     <!-- Main Content -->
     <!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
 <header class="intro-header" style="background-image: url('https://raw.githubusercontent.com/LiviuLvu/liviulvu.github.io/master/img/hero-color2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Liviu's Blog</h1>
-                    <span class="subheading">Personal thoughts and work experience</span>
+                <div class="post-heading">
+                    <h1>Sorting App for Classical Composers</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-09-26
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                <div class="post-preview">
-    <a href="/blog/2016/09/26/Sorting-App-for-Classical-Composers/">
-        <h2 class="post-title">
-            Sorting App for Classical Composers
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-09-26
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/blog/2016/09/26/Why-I-started-coding/">
-        <h2 class="post-title">
-            Why I started coding
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-09-26
-    </p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/list-js/">#list-js</a> <a href="/blog/tags/css-libraries/">#css-libraries</a> <a href="/blog/tags/jQery/">#jQery</a> <a href="/blog/tags/async/">#async</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
             
 
-            <ul class="pager">
-    
-    
-</ul>
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3 id="Getting-to-know-list-js"><a href="#Getting-to-know-list-js" class="headerlink" title="Getting to know list.js"></a>Getting to know list.js</h3><p>Finally got it. The connection between list.js and the JSON file is working.<br>Now it is a lot of fun to just add sorting features through list.js</p>
+<p>As I am still learning to work with json and async calls like getJSON() in this case, it took a lot of trial and eror to use both jquery and list.js together, and add the sort and search features.<br>At this point I am visualising the different ways I could display the Items considering future data to be added to each composer in the list.</p>
+<p>But before I get too involved in the layout there are at least two more important features I want to implement. These are “fuzzy search” for easy searching complicated names and a audio sample available for each composer.<br>It’s a great thing that I dont have to worry about the visual part so much. There are so many great css libraries you can use to make the page look good, and focus mostly on app functionality.</p>
+<h3 id="After-switching-through-a-few-small-css-libraries"><a href="#After-switching-through-a-few-small-css-libraries" class="headerlink" title="After switching through a few small css libraries"></a>After switching through a few small css libraries</h3><p>I was wery pleased with the result given by some of the small css libraries. A particular favourite for me is milligram.css<br>Skeleton.css also works very well out of the box.<br>For milligram, a particular feature I love is that when using it for this sorting project, combined with list.js, the button that was clicked for sorting, remained in a clicked state, clearly indicating the sorting criteria.</p>
+<p>One aspect I am not a fan of in miligram.css is the purple color, but in this case it kind of fits with the classical composers idea.</p>
+<p>Finding audio samples for each of the 50 composers took a lot more than I expected, over 2.5 hours. After creating the play link for the audio sample, the user could start multiple sounds at a time. Not good! This was another tricky step for me and I looked at a lot of examples before figuring out a solution.</p>
+<p>After all functionality was in place, it was time to make this look good, both on mobile and desktop. This is one of the parts I enjoy most, as the project is close to completion.</p>
+<h3 id="Most-difficult-decision"><a href="#Most-difficult-decision" class="headerlink" title="Most difficult decision"></a>Most difficult decision</h3><p>for the layout was to display the data in a modal, when the user clicks a link to see more info about a profile. On desktop it is easy, but on mobile it has to be easy to close.</p>
+<p>Getting the correct data to be displayed in the modal was another difficult part but learned a lot in the process.<br>In the end the app looks quite nice and I like the way it behaves. I am sure there is a lot that could be improved so let me know your thoughts on this.</p>
+<p>Feel free to fork the project on git and improve it or make your own version, and please let me know what you built.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -236,7 +256,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
