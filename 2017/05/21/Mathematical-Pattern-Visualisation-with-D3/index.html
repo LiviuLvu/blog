@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Extend Script, lets automate some tasks"/>
+        <meta property="og:title" content="Mathematical Pattern Visualisation with D3"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Extend Script, lets automate some tasks - Liviu&#39;s Blog</title>
+    <title>Mathematical Pattern Visualisation with D3 - Liviu&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -127,12 +127,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Extend Script, lets automate some tasks</h1>
+                    <h1>Mathematical Pattern Visualisation with D3</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
-                        2016-11-28
+                        2017-05-21
                     </span>
                 </div>
             </div>
@@ -152,7 +152,7 @@
                         
 
 
-<a href="/blog/tags/extend-script/">#extend-script</a> <a href="/blog/tags/illustrator/">#illustrator</a> <a href="/blog/tags/sdk-javascript/">#sdk-javascript</a>
+<a href="/blog/tags/javascript/">#javascript</a> <a href="/blog/tags/math/">#math</a> <a href="/blog/tags/algorithm-visualisation/">#algorithm-visualisation</a> <a href="/blog/tags/pattern-generator/">#pattern-generator</a> <a href="/blog/tags/sound-generator/">#sound-generator</a>
 
 
                     
@@ -167,10 +167,14 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Its been a while since modifying scripts for Illustrator. This time it was the need to fix objects with rich black colors, according to printer requirements. </p>
-<p>The printer that I check files for needs all black to be 100% black ink only. This forces me to do some repetitive, heavy editing for many of the art files. Customers send art with many variations of rich black.  </p>
-<p>So, here I go again, searching for ideas, trying to get something useful from the docs and code examples in forums.<br>Experience made a big difference. It was a lot easier to mentally separate the Javascript code logic from the Adobe extend script API. </p>
-<p>In a few hours I found 2 solutions. One to auto correct all black vector objects according to printer rules and a second code changes raster images to gray scale for black ink art only.<br>What a great way to put in practice Javascript skills.</p>
+                <h3 id="The-idea-came-from-a-book"><a href="#The-idea-came-from-a-book" class="headerlink" title="The idea came from a book"></a>The idea came from a book</h3><hr>
+<img src="/blog/2017/05/21/Mathematical-Pattern-Visualisation-with-D3/digitadition.png" alt="This is an example image" title="This is an example image">  
+<p>There is this book I have on my desk called “Brainmatics Logic Puzzles” from Ivan Moscovich. A few days ago I opened it on the page about Kaprekar’s Digitadition pattern. That looked very interesting and made a few lines in Illustrator to see the pattern.<br>After drawing a few lines I decided to generate the pattern as large as possible and see what happens with large numbers.  </p>
+<p>This digitadition pattern made by selecting a number and adding to it the sum of its digits.</p>
+<p>Example:<br>take number 25, add 2+5, you get 28, and repeat<br>28, 38, 49, 62, 70, 77, 91, 101, 103, 107, 115</p>
+<h3 id="View-live-demo-below"><a href="#View-live-demo-below" class="headerlink" title="View live demo below"></a>View live demo below</h3><p>Live demo on github: <a href="https://liviulvu.github.io/d3-kaprekar-pattern/">Link to live demo</a><br>Get the code made for this demo here: <a href="https://liviulvu.github.io/d3-kaprekar-pattern/">Code Files</a>  </p>
+<p>The interface is zoomable and scrollable thanks to D3 but I did not take the time to fix some UI quirks. For example you can scroll off the screen and there is no reset button to center back the shapes.</p>
+<p>The pattern looks a bit like data embedded on a tape, so I searched the web to find ways to convert this pattern to sound. Found two resources for this:<br>One is <a href="http://photosounder.com/" target="_blank" rel="external">Photosounder</a> (Windows), which is a software that can generate sound from images.<br>The second is a website that can generate sound from number patterns, called <a href="http://www.musicalgorithms.org/3.2/" target="_blank" rel="external">MusicAlgorithms</a>.<br>Ok, this was fun, but cant think of anything useful coming out of this experiment. Moving on.</p>
 
 
                 
