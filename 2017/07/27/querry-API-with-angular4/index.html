@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Liviu&#39;s Blog"/>
+        <meta property="og:title" content="Querry API with Angular 4"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2017/3 - Liviu&#39;s Blog</title>
+    <title>Querry API with Angular 4 - Liviu&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -119,63 +119,84 @@
 
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('https://raw.githubusercontent.com/LiviuLvu/liviulvu.github.io/master/img/uipattern.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2017/3</h1>
+                <div class="post-heading">
+                    <h1>Querry API with Angular 4</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2017-07-27
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/blog/tags/angular4/">#angular4</a> <a href="/blog/tags/typescript/">#typescript</a> <a href="/blog/tags/angular-animations/">#angular animations</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/blog/2017/03/26/Completed-FreeCodeCamp-FrontEnd-Certificate/">
-        <h1 class="post-title archive">
-            Completed FreeCodeCamp FrontEnd Certificate
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-03-26
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/blog/2017/03/12/Having-Fun-Making-AI-for-Tic-Tac-Toe-Game/">
-        <h1 class="post-title archive">
-            Having Fun Making AI for Tic Tac Toe Game
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-03-12
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="Rambling-about-building-an-app-with-angular-to-show-some-data-from-Marvel-API"><a href="#Rambling-about-building-an-app-with-angular-to-show-some-data-from-Marvel-API" class="headerlink" title="Rambling about building an app with angular to show some data from Marvel API."></a>Rambling about building an app with angular to show some data from Marvel API.</h2><p>Received a challenge to build a small app that connects to the Marvel API. The limits imposed are to build it using angular (any version I choose), provide unit tests, provide a search function.<br>Needless to say I failed to build the app. </p>
+<p>I had no idea how to use angular but did not expect to take me more than a week to learn. Basics are simple to learn in 2 days, but then I hit a brick mind wall when reaching the area of http calls, routing and testing.</p>
+<p>Two years back after doing a lot of tutorials, I still could not build an advanced app with angular js (ver 1). That time I was also very novice in javascript. Made the mistake of investing time in framewrks, instead of learning true javascript basics. Now I thought Angular should be easy to use, given my understanding of javascript, but it was not so. After two weeks and a lot of tutorials and reading, I still struggle. </p>
+<p>Part of the added difficulty is that I had no understanding about writing type script. Tough type script seemed difficult to get at first, I am starting to like it more, the more I learn about it and use it. Combined with visual studio auto complete and suggestions it saves a ton of spelling errors and faulty logic (my logic that is).</p>
+<p>Completed a few tutorials on basics, hoping it will get me closer to understanding the parts that make an angular app, and it did help. The only thing missing now is to understand how to modify the params for the http call in order to get the data from the API that I need. In this case Marvel comics.</p>
+<p>What is unusual for me about this api call is the combination of hashed passwords and time stamp.<br>The api takes three params: the link + time stamp + hash(time stamp + private + public password). That means I need 2 functions. One to create the time stamp, another to create the hash combination. At least that is how I see one way of providing the params for the http call. Nevermind, for now I will leave those hard coded.</p>
+<p>I tweked a bit on the css and spent a lot of time with the angular animations module to understand it and build the animations I wanted to have in the ui. The transitions help a lot with the user experience.</p>
+<p>Now it is done, but I need to get going with testing.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -233,7 +254,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
