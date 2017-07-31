@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Solving Les Algorithmes: Personal Strategy"/>
+        <meta property="og:title" content="Dual Boot Windows 10 and Linux Mint"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Solving Les Algorithmes: Personal Strategy - Liviu&#39;s Blog</title>
+    <title>Dual Boot Windows 10 and Linux Mint - Liviu&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -127,12 +127,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Solving Les Algorithmes: Personal Strategy</h1>
+                    <h1>Dual Boot Windows 10 and Linux Mint</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
-                        2016-12-30
+                        2017-08-01
                     </span>
                 </div>
             </div>
@@ -152,7 +152,7 @@
                         
 
 
-<a href="/blog/tags/solving-algorithms/">#solving-algorithms</a> <a href="/blog/tags/javascript/">#javascript</a>
+<a href="/blog/tags/linux-mint/">#linux-mint</a> <a href="/blog/tags/linux/">#linux</a> <a href="/blog/tags/dual-boot-linux-windows/">#dual-boot-linux-windows</a>
 
 
                     
@@ -167,13 +167,30 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>The following is an overview of how I go about solving algorithm challenges.</p>
-<p>Ideas for solving algorithms can come anywhere, I don’t need to be using my laptop. As log as I think about the problem, and start making logical connections in my head I can at least come up with new ideas to test. One time I was in the shower when the solution to a challenge hit me.</p>
-<p>Fastest first step I take, if the algorithm seems too complex is to write short comments.<br>• what is the main issue to solve<br>• what steps need to be taken<br>• random ideas and pseudo code</p>
-<p>If I can build from there, that is great.<br>Set a time limit of 30 minutes. This time limit helps me focus, and prevents me from loosing time when there is no end in sight. If the solution does not seem to show up, I start looking for answers in the great internet.<br>Optimizing seems equally difficult as it is to come up with a solution. After I find a solution by myself I always look to other peoples code and try to learn a better way of solving the same algorithm.</p>
-<p>It was very difficult when doing algorithms first few times, then I started to enjoy the challenge of using more math to solve logic in code. I suck at math, but the more algorithms I solve the easier it gets. </p>
-<p>And it is also a fun learning path, for example when I read about an algorithm written by Erastothenes some 2000 years ago. The “Sieve of Eratosthenes” is still used today in different forms, to find all prime numbers up to any given limit.</p>
-<p>Since I am only a few months in to this coding + math + logic business, this article is more of a journal than a how to instructional and would love to read about your strategy for solving algorithms.</p>
+                <p>This weekend I installed Linux Mint along side with Windows 10, which was already installed. This was my long desire for a few weeks, but I always delayed instalation due to the complicated setup and multiple different settings both in UEFI and formatting.</p>
+<p>There are a lot of old tutorials for windows 7 that do not work for win 8 or 10. Somehow I suspect I’m not the only one that had a hard time dual booting windows10 with a linux distro, so I decided this post will be a short one outlining the most difficult parts of the setup.<br>The goal is to add a linux distro when you already have windows 10 installed.</p>
+<h3 id="Preparation-setup-is-easy"><a href="#Preparation-setup-is-easy" class="headerlink" title="Preparation setup is easy"></a>Preparation setup is easy</h3><p>After building a bootable USB wih Rufus, you need to create space for Linux on the drive.<br>Shrink the windows partition with disk management tool and leave some 100GB of unused space (probably less is needed, but that is how i went). There is also the option to make this partition with the linux manager, but this seemed more convenient and safe.</p>
+<h3 id="Incredible-USB-booting-difficulties"><a href="#Incredible-USB-booting-difficulties" class="headerlink" title="Incredible USB booting difficulties"></a>Incredible USB booting difficulties</h3><p>Most of the day was spent reformatting the USB with all settigns and multiple distros, and none would boot. After destroying one USB and buying another, and lots of bios / UEFI tinkering, I discovered that activating the DD compatibility option in Rufus made the USB bootable.</p>
+<p>Entering the BIOS/UEFI is another discovery adventure. My laptop uses F2 to enter BIOS/UEFI, and F12 to display startup options, but there are lots of others for different computers.</p>
+<h3 id="Installing-Linux-Mint"><a href="#Installing-Linux-Mint" class="headerlink" title="Installing Linux Mint"></a>Installing Linux Mint</h3><p>Great joy after making the usb bootable. Now I was on familiar ground, I’ve done this before and watched a lot of tutorials about partitions schemes.<br>After trying Ubuntu, Solus and Mint, in the end I liked the Mint distro the most. My partition structure is as follows:</p>
+<ol>
+<li>BOOT —  500MB — EXT4</li>
+<li>SWAP —  (minim your RAM size) — EXT4</li>
+<li>ROOT —  60GB — EXT4</li>
+</ol>
+<p>There are a lot of tutorials where the BOOT partition is not created, but this works for me. SWAP is recommended to be 2x the RAM capacity.</p>
+<h3 id="Boot-manager-problems"><a href="#Boot-manager-problems" class="headerlink" title="Boot manager problems"></a>Boot manager problems</h3><p>Very important setting is the “Device for boot loader”. Since I made a separate BOOT partition, I selected that.</p>
+<p>This last setting is by far the most confusing part since windows 10 does not use BIOS, but UEFI. This has protection mechanisms that make dual boot a lot harder to setup.<br>Some people seem to leave the setting untouched, while others select the “windows boot manager” partition. Make sure you have a windows recovery USB ready in case you get it wrong here and need to repair the boot manager.</p>
+<p>Finally after the install was done, booted computer but this fella enters directly in Windows as if nothing happened.<br>Luckyly I remembered a setting in UEFI that allows to select trusted files to run when starting the machine. It is called: <code>Select an UEFI file as trusted for executing</code><br><a href="https://www.youtube.com/watch?v=cVbUrzYD8PE" target="_blank" rel="external">See this video for how to find it.</a><br>In there you navigate to <code>HDD0/EFI/ubuntu/</code> or something similar. Now you should see a list of files, of wich one should be <code>shim64.efi</code>. Add this file, save, exit and enter bios again.  </p>
+<p>Read more about shim64.efi:<br><a href="https://askubuntu.com/questions/342365/what-is-the-difference-between-grubx64-and-shimx64" target="_blank" rel="external">“… is a relatively simple program that provides a way to boot on a computer with Secure Boot active”</a>  </p>
+<p>You will see the new addition listed in the boot order menu.<br>You need to move it to top priority.  </p>
+<p>Other options to access the ubuntu boot loader are:</p>
+<ul>
+<li>use F12 boot menu to show boot options</li>
+<li>from Windows10, click restart while holding shift</li>
+</ul>
+<p>The Mint distro feels very smooth. I installed node.js, visual studio, GIT and some more small programs. I just love it!</p>
+<p>Ok, hope this helps you with your install. Best of luck!</p>
 
 
                 
