@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hosting my blog on github"/>
+        <meta property="og:title" content="Generators in Js Example"/>
     
 
     <!--Open Graph Description-->
@@ -44,7 +44,7 @@
 
     <!-- Title -->
     
-    <title>Hosting my blog on github - Liviu&#39;s Blog</title>
+    <title>Generators in Js Example - Liviu&#39;s Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -127,12 +127,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Hosting my blog on github</h1>
+                    <h1>Generators in Js Example</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
-                        2016-09-28
+                        2017-09-22
                     </span>
                 </div>
             </div>
@@ -152,7 +152,7 @@
                         
 
 
-<a href="/blog/tags/personal/">#personal</a>
+<a href="/blog/tags/javascript/">#javascript</a> <a href="/blog/tags/es6/">#es6</a> <a href="/blog/tags/generators/">#generators</a>
 
 
                     
@@ -167,18 +167,16 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>My previous blog was dedicated to design projects, and because I only worked on coding skillls in the past two years, that blog was left to the dust. Only recently I decided to write about what I build and after searching for a quick way to build a minimal blog this is what i found.</p>
-<h3 id="The-github-blogging-options-I-found"><a href="#The-github-blogging-options-I-found" class="headerlink" title="The github blogging options I found"></a>The github blogging options I found</h3><p>If you want to host the project on git, there is Jekyll, Hexo, and Simple for building a static blog.</p>
-<p>Jekyl seemed the best way to go but, I have a windows laptop and I could not make the blog run after following the specific windows instructions. All those ruby and gems notions are just too forreign for me and sounds like I am installing jewlery software.</p>
-<p>Simple sounded well… simple to use. Only i did not even tried to use it after seeing all those comments in asian language and not much documentation about how to use and customize it.</p>
-<h3 id="Hexo-did-the-job"><a href="#Hexo-did-the-job" class="headerlink" title="Hexo did the job"></a>Hexo did the job</h3><p>The platform website and documentation is amaizing. I could find everything I needed, fast. It runs through node.js and there are no special instructions for windows users.</p>
-<p>It just works. No need to install anything extra besides what I am already using daily: Node and git</p>
-<p>Allmost gave up completly after failing to deploy corectly on github. Had a really hard time figuring out how the path to website domain should be customized.</p>
-<p>The dev tools console debugger showed css files and a few others were missing. The path requesting them was in correct. And i was also not using the hexo commands as needed to generate and deploy the updates.</p>
-<p>After getting acustomed to the project tree, command line updating and posting, customizing a downloaded template, working with hexo is like woohoo, super easy for building a simple blog.</p>
-<h3 id="Comments-disqus"><a href="#Comments-disqus" class="headerlink" title="Comments disqus"></a>Comments disqus</h3><p>Setting up the comments was so easy. Just entered my disqus profile in the customisation file for the template and added the blog address to my disqus account.</p>
-<h3 id="The-effort-was-worth-it"><a href="#The-effort-was-worth-it" class="headerlink" title="The effort was worth it"></a>The effort was worth it</h3><p>Over all the process of building the blog on git, from decision to finish, took me a loong night, but I’m verry happy with the result.<br>I enjoy writing posts in markdown, there is code highligting and other features out of the box.<br>Now I can discard my wordpress blog and never worry about expiring domain and hosting, and complicated database and wordpress backup.</p>
-<p>If you know any other blogging options for github, share a comment about your experience. Thanks!</p>
+                <h3 id="What-is-this-contraption"><a href="#What-is-this-contraption" class="headerlink" title="What is this contraption?"></a>What is this contraption?</h3><p>Generators are special functions that can pause and continue execution. I read this can lead to many applications but fot now I am just trying to understand how they work.</p>
+<p>While learning about generator functions in javascript I made a simple example with some console logs. This is my attempt to explain myself the basic mechanics.</p>
+<h3 id="A-simple-example"><a href="#A-simple-example" class="headerlink" title="A simple example"></a>A simple example</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>* <span class="title">WeaponGenerator</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">yield</span> <span class="string">"oranges"</span>;</div><div class="line">  <span class="keyword">yield</span> <span class="string">"lemons"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> weaponIterator = WeaponGenerator();</div><div class="line"></div><div class="line"><span class="keyword">const</span> result1 = weaponIterator.next();</div><div class="line"></div><div class="line"><span class="comment">// typeof result1 is object? true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">"typeof result1 is object? "</span> + (<span class="keyword">typeof</span> result1 === <span class="string">'object'</span>));</div><div class="line"><span class="comment">// result1.value is: oranges</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">"result1.value is: "</span> + result1.value);</div><div class="line"><span class="comment">// is iterator done? false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'is iterator done? '</span> + result1.done); </div><div class="line"></div><div class="line"><span class="keyword">const</span> result2 = weaponIterator.next();</div><div class="line"></div><div class="line"><span class="comment">// result1.value is: orange</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">"result2.value is: "</span> + result2.value);</div><div class="line"><span class="comment">// is iterator done? false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'is iterator done? '</span> + result2.done);</div><div class="line"></div><div class="line"><span class="keyword">const</span> result3 = weaponIterator.next();</div><div class="line"></div><div class="line"><span class="comment">//is iterator done? true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'is iterator done? '</span> + result3.done);</div></pre></td></tr></table></figure>
+<h3 id="Key-takeaways-for-now"><a href="#Key-takeaways-for-now" class="headerlink" title="Key takeaways for now"></a>Key takeaways for now</h3><ul>
+<li>Whenever creating a generator function you add a <code>*</code> (star) symbol after <code>function</code>  </li>
+<li>In comparison to a normal function the generator can return multiple values  </li>
+<li>Each step in the execution is triggered by calling <code>.next()</code>  </li>
+<li><code>yield</code> keyword returns the value after a step is completed</li>
+</ul>
+<p>Well there is a lot more to it, like what happenes to <code>this</code> in different scenarios. Got some more reading to do. See you later!</p>
 
 
                 
